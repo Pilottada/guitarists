@@ -46,5 +46,9 @@ def adding_process():
 =======
     
    
+<<<<<<< HEAD
     
 >>>>>>> e6f331c2323507558f77aa6aa8b3cbf355fb886b
+=======
+    #giovanni fabris é un frocio e pure albi selfo
+>>>>>>> 114f29503d354276ec1eff5e0e1ac58af72b5799
