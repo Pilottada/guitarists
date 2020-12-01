@@ -28,7 +28,9 @@ def check_band(band_name):
 def adding_process():
     print(Hi, it's time to add new guitarist players to this dataset, who would you like to add?")
     g_name = input("Tell me the first and last name")
-    for guitarist, band in list_of_guitarists.items():
+    with open('innovators.csv', 'w', newline='') as file:
+            writer = csv.writer(file, delimiter='|')
+            writer.writerows(data_list)
             
             if g_name == guitarist:
                 print("This guitarist, member of {} is already in the database, thank you anyway".format(band))
