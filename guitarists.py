@@ -24,3 +24,17 @@ def check_band(band_name):
             print("The guitar hero of {} is {}".format(band, guitarist))
             return
     print("Sorry, we don't know who is the guitar hero of {}".format(band_name))
+    
+def adding_process():
+    print(Hi, it's time to add new guitarist players to this dataset, who would you like to add?")
+    g_name = input("Tell me the first and last name")
+    for guitarist, band in list_of_guitarists.items():
+            
+            if g_name == guitarist:
+                print("This guitarist, member of {} is already in the database, thank you anyway".format(band))
+            else:
+                b_name= input("tell me the name of the band")
+                list_of_guitarists[g_name] = b_name
+                return "The guitar hero of {} is {}".format(b_name, g_name)
+                
+    print("Sorry, we don't know who is the guitar hero of {}".format(band_name))
