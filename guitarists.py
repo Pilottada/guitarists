@@ -26,7 +26,7 @@ def check_band(band_name):
     print("Sorry, we don't know who is the guitar hero of {}".format(band_name))
 
 def adding_process():
-    print(Hi, it's time to add new guitarist players to this dataset, who would you like to add?")
+    print("Hi, it's time to add new guitarist players to this dataset, who would you like to add?")
     g_name = input("Tell me the first and last name")
     for guitarist, band in list_of_guitarists.items():
             
