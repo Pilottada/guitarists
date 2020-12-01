@@ -40,4 +40,4 @@ def adding_process():
     print("Sorry, we don't know who is the guitar hero of {}".format(band_name))
     
    
-    
+    #giovanni fabris é un frocio e pure albi selfo
