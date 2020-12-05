@@ -23,10 +23,10 @@ def check_guitarist(guitar_player):
     else:
         print("Sorry, {} does not seem to be a known guitarist".format(guitar_player))
         print ("Would you like to add a voice to our database?")
-        resp = input("Y or N")
+        resp = input("Y or N -> ")
         if resp =="Y":
-            name_player = input("put the name of the guitarist")
-            name_band = input("put the name of the band")
+            name_player = input("Put here the name of the guitarist -> ")
+            name_band = input("Put here the name of the band -> ")
             with open('players_bands.csv', 'a') as newFile:
                 newFileWriter = csv.writer(newFile)
                 row = len(db)
@@ -38,29 +38,27 @@ def check_guitarist(guitar_player):
     
                 
                 
-# def check_band(band_name):
-#     db = pd.DataFrame(pd.read_csv('players_bands.csv'))
-#     for check in db.values:
-#         if check[1] == band_name:
-#             print("The guitar hero of {} is {}".format(band, guitarist))
-#             return
-#     print("Sorry, we don't know who is the guitar hero of {}".format(band_name))
+def check_band(band_name):
+    db = pd.DataFrame(pd.read_csv('players_bands.csv'))
+    if band_name in db["bands"].values:
+        print ("The guitar hero of", band_name, "is", db["Players"].loc[db["bands"]==band_name].values[0]) 
+    
+    else:
+        print ("Sorry, {} does not seem to be a known band".format(band_name))
+        print ("Would you like to add a voice to our database?")
+        resp = input ("Y or N -> ")
+        if resp == "Y":
+            name_band = input ("Put here the name of the band -> ")
+            name_player = input("Put here the name of the guitarist -> ")
+            with open('players_bands.csv', 'a') as newFile:
+                newFileWriter = csv.writer(newFile)
+                row = len(db)
+                newFileWriter.writerow([row, name_band, name_player])
+            print("Thank you for your contribution!")
+        else: 
+            print ("Thank you anyways, have a good day!")
 
-# def adding_process():
-#     print("Hi, it's time to add new guitarist players to this dataset, who would you like to add?")
-#     g_name = input("Tell me the first and last name")
-#     with open('innovators.csv', 'w', newline='') as file:
-#             writer = csv.writer(file, delimiter='|')
-#             writer.writerows(data_list)
-            
-#             if g_name == guitarist:
-#                 print("This guitarist, member of {} is already in the database, thank you anyway".format(band))
-#             else:
-#                 b_name= input("tell me the name of the band")
-#                 list_of_guitarists[g_name] = b_name
-#                 return "The guitar hero of {} is {}".format(b_name, g_name)
-                
-#     print("Sorry, we don't know who is the guitar hero of {}".format(band_name))
 
-    #giovanni fabris é un frocio e pure albi selfo
+
+
 
