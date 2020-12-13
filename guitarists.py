@@ -21,9 +21,9 @@ def check_guitarist(guitar_player):
 def check_band(band_name):
     for guitarist, band in list_of_guitarists.items():
         if band == band_name:
-            print("The guitar hero of {} is {}".format(band, guitarist))
-            return
-    print("Sorry, we don't know who is the guitar hero of {}".format(band_name))
+            return print("The guitar hero of {} is {}".format(band, guitarist))
+            
+    return print("Sorry, we don't know who is the guitar hero of {}".format(band_name))
 
 def adding_process():
     print("Hi, it's time to add new guitarist players to this dataset, who would you like to add?")
@@ -39,5 +39,4 @@ def adding_process():
                 
     print("Sorry, we don't know who is the guitar hero of {}".format(band_name))
     
-   
-    #giovanni fabris é un frocio e pure albi selfo
+
