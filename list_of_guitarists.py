@@ -1,3 +1,10 @@
+"""
+This is the original dictionary containing 
+the names of the guitarists and the respective 
+bands. From this we will create a csv file 
+using the function "database" from csv_creator.py
+"""
+
 list_of_guitarists = {'Eric Clapton':'Cream',
 'Jimmy Page': 'Led Zeppelin',
 'Keith Richards': 'Rolling Stones',

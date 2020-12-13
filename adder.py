@@ -1,13 +1,29 @@
+"""
+This module is focused on a single function that 
+lets users add a new row on the csv of the 
+guitarists/bands database.
+"""
 import csv
 import pandas as pd
-from checker import check_guitarist, check_band
-    
+from checker import Check
+
+check = Check()    
      
 def add_element(g_or_b):
+    """
+    This function uses the user's input to the program 
+    (which can be of either a band or a guitarist) with 
+    the goal of adding it into the database.
+    Before doing so, the function checks if the name is
+    already inside the csv file. If it is all clear, the function
+    will ask the user to specify if the name is the one of a guitarist
+    or a band, and then ask for the other name. Finally it 
+    writes both inputs in the csv file in the right columns.
+    """
     db = pd.DataFrame(pd.read_csv('players_bands.csv'))
-    if check_band(g_or_b):
+    if check.check_band(g_or_b):
         print("sorry, but " + g_or_b + "is already present in the database, thank you anyway")
-    elif check_guitarist(g_or_b):
+    elif check.check_guitarist(g_or_b):
         print("sorry, but " + g_or_b + " is already present in the database, thank you anyway")
     else:
         name1 = input("Is he a guitarist or is it a band (g or b) -> ")
